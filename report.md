@@ -14,5 +14,6 @@
     - Skills -> Break AI into modular abilities
     - Tests -> Prove behavior works
     - Governance -> Prevent unsafe AI behavior
+    - MCP -> connect the AI to the outside world
 
 ## Arcitectural Approach
