@@ -10,6 +10,8 @@ Project Chimera is an autonomous influencer AI system that researches trends, ge
 - MUST log all actions for traceability
 - MUST prioritize safety over creativity
 
-## Non-Goals
-- Not building a full social network
-- Not running agents without governance
+## Constraints
+- Human-in-the-Loop approval required before publishing
+- Must comply with platform policies (YouTube, TikTok, X)
+- Must log all agent decisions (auditability)
+-No irreversible actions without review
