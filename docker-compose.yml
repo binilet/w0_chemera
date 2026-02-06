@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  chimera-api:
+    build: .
+    container_name: chimera-api
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URL: mongodb://mongo:27017/chimera
+    ports:
+      - "8000:8000"
+    command: ["uv", "run", "python", "-m", "apps.orchestrator"]
+
+  mongo:
+    image: mongo:7
+    container_name: chimera-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
