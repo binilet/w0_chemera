@@ -1,0 +1,23 @@
+name: Chimera CI/CD Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: make setup
+
+      - name: Lint and Type Check
+        run: make lint
+
+      - name: Run Dockerized Tests
+        run: make test

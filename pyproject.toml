@@ -1,0 +1,28 @@
+[project]
+name = "project-chimera"
+version = "0.1.0"
+description = "Autonomous Influencer Network"
+requires-python = "==3.11.*"
+dependencies = [
+    "mcp>=0.1.0",
+    "coinbase-agentkit>=0.1.0",
+    "pydantic-ai>=0.0.10",
+    "motor", # MongoDB Async [cite: 594]
+    "weaviate-client",
+    "redis",
+    "fastapi",
+    "uvicorn",
+    "pydantic>=2.0"
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio",
+    "ruff>=0.3.0",    # Linting and Formatting
+    "mypy>=1.9.0",    # Static Type Checking
+    "httpx",          # For testing API contracts [cite: 594]
+]
+
+[tool.uv]
+package = true
