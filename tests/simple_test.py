@@ -1,9 +1,5 @@
-
 import pytest
 
-def test_ci_sanity_pass():
-    assert 1 + 1 == 2
-
-
-
-
+@pytest.mark.parametrize("x,y,expected", [(1, 1, 2)], ids=["CI sanity check"])
+def test_ci_sanity_pass(x, y, expected):
+    assert x + y == expected
