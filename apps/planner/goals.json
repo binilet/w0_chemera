@@ -1,0 +1,12 @@
+[
+  {
+    "id": "goal-1",
+    "title": "Increase engagement on AI topics",
+    "trend": { "topic": "AI Agents", "score": 0.92 }
+  },
+  {
+    "id": "goal-2",
+    "title": "Share product tips",
+    "trend": { "topic": "Productivity", "score": 0.75 }
+  }
+]
