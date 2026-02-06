@@ -16,3 +16,9 @@ lint:
 clean:
 	docker compose down -v
 	find . -type d -name "__pycache__" -exec rm -rf {} +
+
+lint:
+    uv run ruff check .
+
+lint-fix:
+    uv run ruff check . --fix

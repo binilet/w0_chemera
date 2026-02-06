@@ -2084,7 +2084,6 @@ dependencies = [
     { name = "motor" },
     { name = "pydantic" },
     { name = "pydantic-ai" },
-    { name = "redis" },
     { name = "uvicorn" },
     { name = "weaviate-client" },
 ]
@@ -2106,7 +2105,6 @@ requires-dist = [
     { name = "motor" },
     { name = "pydantic", specifier = ">=2.0" },
     { name = "pydantic-ai", specifier = ">=0.0.10" },
-    { name = "redis" },
     { name = "uvicorn" },
     { name = "weaviate-client" },
 ]

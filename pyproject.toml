@@ -28,3 +28,6 @@ package = true
 
 [tool.setuptools.packages.find]
 include = ["apps*"]
+
+[tool.ruff] 
+ignore = ["F401"] #ignore imported but unused errors
