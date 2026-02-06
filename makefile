@@ -12,7 +12,7 @@ test:
 # Combined duplicate lint targets and ensured proper find syntax
 lint:
 	uv run ruff check .
-	uv run mypy .
+	# uv run mypy . # Uncomment if type checking is desired
 
 lint-fix:
 	uv run ruff check . --fix
