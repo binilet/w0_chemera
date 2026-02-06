@@ -24,7 +24,7 @@ This document outlines the **agent pattern, governance strategy, human-in-the-lo
 
 ---
 
-### Selected Pattern: **Planner–Worker–Judge + Specialized Skill Agents**
+### Selected Pattern: **Planner–Worker–Judge
 
 #### Rationale
 
@@ -54,7 +54,8 @@ flowchart TD
     Planner --> Worker
     Worker --> Judge
     Judge -->|Approved| Publish
-    Judge -->|Low Confidence| Human
+    Judge -->|Medium Confidence| Human
+    Judge -->|Low Confidence| Reject
     Human -->|Approved| Publish
     Human -->|Rejected| Planner
 ```
@@ -67,7 +68,7 @@ flowchart TD
 
 Human review is required when:
 
-* Confidence score < **0.90**
+* Confidence score < **0.90** and > **0.70**
 * Content involves **politics, health, finance, or legal topics**
 * Content is flagged for **bias, misinformation, or ethical risk**
 * The agent requests clarification

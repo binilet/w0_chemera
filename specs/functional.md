@@ -3,7 +3,8 @@
 ## Agent User Stories
 
 - As an Agent, I need to fetch trending content topics
-
+- As an Agent, I need to curate posts
+- As an Agent, I need to reply to comments
 - As an Agent, I need to analyze engagement metrics
 - As an Agent, I need to generate captions for videos
 - As an Agent, I need to validate content safety before publishing
